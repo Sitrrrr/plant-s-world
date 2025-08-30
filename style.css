@@ -1,43 +1,43 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e6f5e6;
-  margin: 0;
-  padding: 0;
-}
+      font-family: Arial, sans-serif;
+      background-color: #e6f5e6;
+      margin: 0;
+      padding: 0;
+    }
 
-header {
-  background-color: #4caf50;
-  color: white;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
 
-h1 {
-  flex-grow: 1;
-  text-align: center;
-  margin: 0;
-}
+    h1 {
+      flex-grow: 1;
+      text-align: center;
+      margin: 0;
+    }
 
-#search {
-  padding: 10px;
-  font-size: 16px;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: 20px;
-}
+    #search {
+      padding: 10px;
+      font-size: 16px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: 20px;
+    }
 
-.burger {
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin-right: 20px;
-}
+    .burger {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-right: 20px;
+    }
 
-.side-menu {
+    .side-menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -92,44 +92,57 @@ li strong{
 .side-menu a:active {
   background-color: #81c784;
 }
+    .offers {
+      padding: 20px;
+    }
 
-.offers {
-  padding: 20px;
-}
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
+    .plant-card {
+      background-color: white;
+      border: 1px solid #ccc;
+      width: 200px;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
 
-.plant-card {
-  background-color: white;
-  border: 1px solid #ccc;
-  width: 200px;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-}
+    .plant-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
 
-.photo {
-  background-color: #d0e8d0;
-  height: 100px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
+    .photo {
+      background-color: #d0e8d0;
+      height: 100px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
 
-.name {
-  margin: 5px 0;
-  font-size: 18px;
-  color: #2e7d32;
-}
+    .name {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #2e7d32;
+    }
 
-.description {
-  font-size: 14px;
-  color: #555;
-}
+    .description {
+      font-size: 14px;
+      color: #555;
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
