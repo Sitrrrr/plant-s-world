@@ -7,48 +7,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
+    <button id="menu-toggle" class="burger">☰</button>
     <h1>🌱 PLANT'S WORLD</h1>
     <input type="text" id="search" placeholder="пошук...">
   </header>
 
+  <!-- Бічне меню -->
+  <nav id="side-menu" class="side-menu">
+    <ul>
+      <li><strong>декоративні</strong>
+        <ul>
+          <li><a href="#">фікуси</a></li>
+          <li><a href="#">драцени</a></li>
+          <li><a href="#">інші</a></li>
+        </ul>
+      </li>
+      <li><strong>квітучі</strong>
+        <ul>
+          <li><a href="#">таки сякі</a></li>
+        </ul>
+      </li>
+      <li><strong>сукуленти</strong>
+        <ul>
+          <li><a href="#">таки сякі</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
   <section class="offers">
     <h2>найкращі пропозиції:</h2>
-    <div class="cards-container">
-      <!-- 20 plant cards -->
-      <div class="plant-card">
-        <div class="photo">фото</div>
-        <h3 class="name">назва</h3>
-        <p class="description">короткий опис про рослину</p>
-      </div>
-      <!-- Repeat the card 19 more times -->
-      <!-- You can copy-paste or use JS to generate dynamically -->
-      <!-- Here's a quick way to generate them in JS below -->
-    </div>
+    <div class="cards-container" id="cards-container"></div>
   </section>
 
-  <script>
-    // Генерація 20 карток автоматично
-    const container = document.querySelector('.cards-container');
-    for (let i = 1; i <= 20; i++) {
-      const card = document.createElement('div');
-      card.className = 'plant-card';
-      card.innerHTML = `
-        <div class="photo">фото</div>
-        <h3 class="name">назва ${i}</h3>
-        <p class="description">короткий опис про рослину ${i}</p>
-      `;
-      container.appendChild(card);
-    }
+<script src="aa.js"></script>
 
-    // Пошук по назві
-    document.getElementById('search').addEventListener('input', function () {
-      const query = this.value.toLowerCase();
-      document.querySelectorAll('.plant-card').forEach(card => {
-        const name = card.querySelector('.name').textContent.toLowerCase();
-        card.style.display = name.includes(query) ? 'block' : 'none';
-      });
-    });
-  </script>
 </body>
 </html>

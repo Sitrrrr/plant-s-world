@@ -1,62 +1,115 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e6f5e6;
-  margin: 0;
-  padding: 0;
-}
+      font-family: Arial, sans-serif;
+      background-color: #e6f5e6;
+      margin: 0;
+      padding: 0;
+    }
 
-header {
-  background-color: #4caf50;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
 
-#search {
-  margin-top: 10px;
-  padding: 10px;
-  width: 80%;
-  max-width: 400px;
-  font-size: 16px;
-}
+    h1 {
+      flex-grow: 1;
+      text-align: center;
+      margin: 0;
+    }
 
-.offers {
-  padding: 20px;
-}
+    #search {
+      padding: 10px;
+      font-size: 16px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: 20px;
+    }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
+    .burger {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-right: 20px;
+    }
 
-.plant-card {
-  background-color: white;
-  border: 1px solid #ccc;
-  width: 200px;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-}
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #c8e6c9;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
 
-.photo {
-  background-color: #d0e8d0;
-  height: 100px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
+    .side-menu.show {
+      transform: translateX(0);
+    }
 
-.name {
-  margin: 5px 0;
-  font-size: 18px;
-  color: #2e7d32;
-}
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+    }
 
-.description {
-  font-size: 14px;
-  color: #555;
-}
+    .side-menu li {
+      margin-bottom: 10px;
+    }
+
+    .side-menu a {
+      text-decoration: none;
+      color: #2e7d32;
+    }
+
+    .side-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .offers {
+      padding: 20px;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .plant-card {
+      background-color: white;
+      border: 1px solid #ccc;
+      width: 200px;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .photo {
+      background-color: #d0e8d0;
+      height: 100px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .name {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #2e7d32;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #555;
+    }
