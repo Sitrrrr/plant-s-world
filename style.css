@@ -1,115 +1,135 @@
 body {
-      font-family: Arial, sans-serif;
-      background-color: #e6f5e6;
-      margin: 0;
-      padding: 0;
-    }
+  font-family: Arial, sans-serif;
+  background-color: #e6f5e6;
+  margin: 0;
+  padding: 0;
+}
 
-    header {
-      background-color: #4caf50;
-      color: white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      position: relative;
-    }
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 
-    h1 {
-      flex-grow: 1;
-      text-align: center;
-      margin: 0;
-    }
+h1 {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+}
 
-    #search {
-      padding: 10px;
-      font-size: 16px;
-      max-width: 300px;
-      margin-left: auto;
-      margin-right: 20px;
-    }
+#search {
+  padding: 10px;
+  font-size: 16px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: 20px;
+}
 
-    .burger {
-      font-size: 24px;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      margin-right: 20px;
-    }
+.burger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
 
-    .side-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 250px;
-      height: 100%;
-      background-color: #c8e6c9;
-      padding: 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-      z-index: 1000;
-    }
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #c8e6c9;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
 
-    .side-menu.show {
-      transform: translateX(0);
-    }
 
-    .side-menu ul {
-      list-style: none;
-      padding: 0;
-    }
 
-    .side-menu li {
-      margin-bottom: 10px;
-    }
+.side-menu.show {
+  transform: translateX(0);
+}
 
-    .side-menu a {
-      text-decoration: none;
-      color: #2e7d32;
-    }
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
 
-    .side-menu a:hover {
-      text-decoration: underline;
-    }
+.side-menu li {
+  margin-bottom: 10px;
+}
 
-    .offers {
-      padding: 20px;
-    }
+.side-menu a {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #a5d6a7;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2e7d32;
+  display: block;
+  margin-top: 15px ;
+  text-align: center;
 
-    .cards-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
+}
 
-    .plant-card {
-      background-color: white;
-      border: 1px solid #ccc;
-      width: 200px;
-      padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-    }
+li strong{
+  color: #053308;
+  font-size: 18px;
+  
+}
 
-    .photo {
-      background-color: #d0e8d0;
-      height: 100px;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
+.side-menu a:hover {
+  background-color: #9ccc9c;
+  text-decoration: none;
+}
+.side-menu a:active {
+  background-color: #81c784;
+}
 
-    .name {
-      margin: 5px 0;
-      font-size: 18px;
-      color: #2e7d32;
-    }
+.offers {
+  padding: 20px;
+}
 
-    .description {
-      font-size: 14px;
-      color: #555;
-    }
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.plant-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.photo {
+  background-color: #d0e8d0;
+  height: 100px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.name {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+}
