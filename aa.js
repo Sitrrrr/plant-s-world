@@ -1,8 +1,8 @@
 const container = document.getElementById('cards-container');
 
-    // Дані для кожної рослини
+   
     const plants = [
-      { name: "Фікус Бенджаміна", description: "Елегантне деревце з густою кроною та маленькими блискучими листочками.", link: "ficusbenjemin.html", id: "ficus" },
+      { name: "Фікус Бенджаміна", description: "Елегантне деревце з густою кроною та маленькими блискучими листочками.", link: "ficusbenjemin.html", id: "ficus", photo: "photo/фікус бенджаміна.png" },
       { name: "Фікус Лірата", description: "великі, глянцеві листки у формі скрипки роблять його «зіркою інтер’єру»", link: "dracaena.html", id: "dracaena" },
       { name: "Монстера делікатесна", description: "Великі розрізані листки, справжня класика", link: "echeveria.html", id: "echeveria" },
       { name: "Бегонія королівська", description: "Декоративне листя з фантастичними візерунками", link: "ficus.html", id: "ficus" },
@@ -22,7 +22,7 @@ const container = document.getElementById('cards-container');
       card.className = 'card-link';
       card.innerHTML = `
         <div class="plant-card" id="${plant.id}">
-          <div class="photo">фото</div>
+          <img class="photo" src="${plant.photo}>
           <h3 class="name">${plant.name}</h3>
           <p class="description">${plant.description}</p>
         </div>
@@ -30,7 +30,7 @@ const container = document.getElementById('cards-container');
       container.appendChild(card);
     });
 
-    // Пошук
+   
     document.getElementById('search').addEventListener('input', function () {
       const query = this.value.toLowerCase();
       document.querySelectorAll('.plant-card').forEach(card => {
@@ -39,7 +39,7 @@ const container = document.getElementById('cards-container');
       });
     });
 
-    // Меню відкриття/закриття
+    
     const menuToggle = document.getElementById('menu-toggle');
     const sideMenu = document.getElementById('side-menu');
 
