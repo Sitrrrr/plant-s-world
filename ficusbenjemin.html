@@ -7,29 +7,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <body>
+
+  <header>
     <button id="menu-toggle" class="burger">☰</button>
     <h1>🌱 PLANT'S WORLD</h1>
   </header>
 
-  <!-- Меню -->
   <nav id="side-menu" class="side-menu">
     <ul>
+        <li><a href="golovna.html">КАТАЛОГ</a></li>
       <li><strong>декоративні</strong>
         <ul>
-          <li><a href="#">фікуси</a></li>
-          <li><a href="#">драцени</a></li>
-          <li><a href="#">інші</a></li>
+          <li><a href="ficus.html">Фікуси</a></li>
+          <li><a href="monsteri.html">Монстери</a></li>
         </ul>
       </li>
       <li><strong>квітучі</strong>
         <ul>
-          <li><a href="#">таки сякі</a></li>
+          <li><a href="begonii.html">Бегонії</a></li>
+          <li><a href="ciklamen.html">Цикламени</a></li>
         </ul>
       </li>
       <li><strong>сукуленти</strong>
         <ul>
-          <li><a href="#">таки сякі</a></li>
+          <li><a href="tovstyanka.html">Товстянки</a></li>
+          <li><a href="havortii.html">Хавортії</a></li>
         </ul>
       </li>
     </ul>
@@ -56,15 +59,59 @@
 
     <button class="add-to-cart">У кошик</button>
   </div>
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const sideMenu = document.getElementById('side-menu');
-    let menuOpen = false;
 
-    menuToggle.addEventListener('click', () => {
-      menuOpen = !menuOpen;
-      sideMenu.classList.toggle('show', menuOpen);
-    });
+<div class="reviews-section">
+  <h3>Відгуки покупців</h3>
+
+  <div class="review-card">
+    <strong>Микола Медяник</strong>
+    <p>Рослина дуже гарна, листя блискуче. Доставили швидко!</p>
+    <span class="review-date">02.09.2025</span>
+  </div>
+
+  <div class="review-card">
+    <strong>Лабуба</strong>
+    <p>Стоїть у вітальні — всі гості питають, де купив. Рекомендую!</p>
+    <span class="review-date">31.08.2025</span>
+  </div>
+
+  <div class="review-card">
+    <strong>кіця</strong>
+    <p>лайно воно того не варте</p>
+    <span class="review-date">29.08.2025</span>
+  </div>
+
+  <!-- Форма для написання -->
+  <div class="review-form">
+    <h4>Написати відгук</h4>
+    <textarea placeholder="Ваш відгук..." rows="4"></textarea>
+    <button disabled>Надіслати</button>
+    
+  </div>
+</div>
+
+
+<script>
+   const menuToggle = document.getElementById("menu-toggle");
+const sideMenu = document.getElementById("side-menu");
+
+let menuOpen = false;
+menuToggle.addEventListener("click", () => {
+  menuOpen = !menuOpen;
+  sideMenu.classList.toggle("show", menuOpen);
+});
+
+
+  document.addEventListener("click", (event) => {
+    if (
+      menuOpen &&
+      !sideMenu.contains(event.target) &&
+      event.target !== menuToggle
+    ) {
+      menuOpen = false;
+      sideMenu.classList.remove("show");
+    }
+  });
   </script>
 
 
