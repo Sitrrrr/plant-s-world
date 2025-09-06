@@ -56,6 +56,17 @@
 
     <button class="add-to-cart">У кошик</button>
   </div>
-<script src="aa.js"></script>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const sideMenu = document.getElementById('side-menu');
+    let menuOpen = false;
+
+    menuToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      sideMenu.classList.toggle('show', menuOpen);
+    });
+  </script>
+
+
 </body>
 </html>
