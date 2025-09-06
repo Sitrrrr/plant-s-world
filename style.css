@@ -146,3 +146,102 @@ li strong{
       display: block;
     }
 
+.offers h2{
+    font-size: 2.2rem; 
+  font-weight: 700; 
+  text-align: center; 
+  background: linear-gradient(90deg, #3aaf3a, #d4e157);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 15px 0;
+}
+
+.side-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #c8e6c9;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .side-menu.show {
+      transform: translateX(0);
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .side-menu li {
+      margin-bottom: 10px;
+    }
+
+    .side-menu a {
+      text-decoration: none;
+      color: #2e7d32;
+    }
+
+    .side-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .plant-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .plant-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .plant-title {
+      font-size: 28px;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .plant-price {
+      font-size: 22px;
+      color: #388e3c;
+      margin-bottom: 20px;
+    }
+
+    .plant-description,
+    .plant-care {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .add-to-cart {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #388e3c;
+    }
