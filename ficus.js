@@ -48,3 +48,14 @@ const container = document.getElementById('cards-container');
       menuOpen = !menuOpen;
       sideMenu.classList.toggle('show', menuOpen);
     });
+
+      document.addEventListener("click", (event) => {
+        if (
+          menuOpen &&
+          !sideMenu.contains(event.target) &&
+          event.target !== menuToggle
+        ) {
+          menuOpen = false;
+          sideMenu.classList.remove("show");
+        }
+      });
