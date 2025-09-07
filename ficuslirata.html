@@ -38,23 +38,23 @@
     </ul>
   </nav>
 
-
+  <!-- Контент рослини -->
   <div class="plant-container">
-    <img src="photo/фікус бенджаміна.png" alt="Фікус Бенджаміна" class="plant-image">
+    <img src="photo/фікус лірата.png" alt="Фікус Лірата" class="plant-image">
 
-    <h2 class="plant-title">Фікус Бенджаміна</h2>
-    <div class="plant-price">₴450</div>
+    <h2 class="plant-title">Фікус Лірата</h2>
+    <div class="plant-price">₴800</div>
 
     <div class="plant-description">
-      Фікус Бенджаміна — популярна декоративна рослина з блискучим листям, яка чудово очищає повітря та прикрашає інтер’єр.
+      Фікус Лірата —великі, глянцеві листки у формі скрипки роблять його «зіркою інтер’єру»
     </div>
 
     <div class="plant-care">
       <strong>Догляд:</strong><br>
-      - Світле місце без прямих сонячних променів<br>
-      - Поливати 1–2 рази на тиждень<br>
-      - Температура: 18–25°C<br>
-      - Обприскувати листя для підтримки вологості
+      - Світло яскраве розсіяне, не любить прямого сонця<br>
+      - Полив: 1 раз на 7–10 днів; ґрунт має просохнути на 2–3 см<br>
+      - Температура: +18…+26°C, без різких перепадів<br>
+      - Любить обприскування та вологе повітря
     </div>
 
     <button class="add-to-cart">У кошик</button>
@@ -64,25 +64,24 @@
   <h3>Відгуки покупців</h3>
 
   <div class="review-card">
-    <strong>Микола Медяник</strong>
-    <p>Рослина дуже гарна, листя блискуче. Доставили швидко!</p>
+    <strong>Дональд Трамп</strong>
+    <p>якби байден купив цю рослину, війни би не було</p>
     <span class="review-date">02.09.2025</span>
   </div>
 
   <div class="review-card">
-    <strong>Лабуба</strong>
-    <p>Стоїть у вітальні — всі гості питають, де купив. Рекомендую!</p>
+    <strong>Олег Винник</strong>
+    <p>Вам спиться, чи не спиться?</p>
     <span class="review-date">31.08.2025</span>
   </div>
 
   <div class="review-card">
     <strong>кіця</strong>
-    <p>лайно воно того не варте</p>
+    <p>такеж лайно як і фікус бенджаміна</p>
     <span class="review-date">29.08.2025</span>
   </div>
 
-
-</div>
+  <!-- Форма для написання -->
   <div class="review-form">
     <h4>Написати відгук</h4>
     <textarea placeholder="Ваш відгук..." rows="4"></textarea>
@@ -93,7 +92,7 @@
 
 
 <script >
-  const menuToggle = document.getElementById("menu-toggle");
+    const menuToggle = document.getElementById("menu-toggle");
 const sideMenu = document.getElementById("side-menu");
 
 let menuOpen = false;
@@ -114,7 +113,7 @@ menuToggle.addEventListener("click", () => {
     }
   });
 
-  // cart
+  // Додавання до кошика
   document.querySelector('.add-to-cart').addEventListener('click', () => {
     const product = {
       name: "Фікус Бенджаміна",
@@ -131,5 +130,7 @@ menuToggle.addEventListener("click", () => {
   });
 
 </script>
+
+
 </body>
 </html>

@@ -7,32 +7,36 @@ const plants = [
       "Елегантне деревце з густою кроною та маленькими блискучими листочками.",
     link: "ficusbenjemin.html",
     id: "ficus",
-    photo: "photo/фікус бенджаміна.png",
+    photo:"<img src=photo/фікус бенджаміна.png >"
   },
   {
     name: "Фікус Лірата",
     description:
       "великі, глянцеві листки у формі скрипки роблять його «зіркою інтер’єру»",
-    link: "dracaena.html",
+    link: "ficuslirata.html",
     id: "dracaena",
+    photo:"<img src=photo/фікус лірата.png >"
   },
   {
     name: "Монстера делікатесна",
     description: "Великі розрізані листки, справжня класика",
-    link: "echeveria.html",
+    link: "monsteradeli.html",
     id: "echeveria",
+    photo:"<img src=photo/монстера делікатесна.png >"
   },
   {
     name: "Бегонія королівська",
     description: "Декоративне листя з фантастичними візерунками",
     link: "ficus.html",
     id: "ficus",
+    photo:"<img src=photo/бегонія королівська.jpg >"
   },
   {
     name: "Цикламен перський",
     description: "Яскраві квіти, довготривале цвітіння",
     link: "ficus.html",
     id: "ficus",
+    photo:"<img src=photo/цикламен перський.jpg >"
   },
   {
     name: "Фікус Еластика",
@@ -40,42 +44,49 @@ const plants = [
       "має товсті, темно-зелені або строкаті листки. Дуже витривалий і простий у догляді",
     link: "ficus.html",
     id: "ficus",
+    photo:"<img src=photo/фікус еластіка.jpg >"
   },
   {
     name: "Монстера варієгатна",
     description: "Біла чи кремова варіація на листках, рідкість",
     link: "ficus.html",
     id: "ficus",
+    photo:"<img src=photo/монстера варієгатна.jpg >"
   },
   {
     name: "Бегонія вічноквітуча",
     description: "Квітує цілий рік",
     link: "ficus.html",
     id: "ficus",
+    photo:"<img src=photo/бегонія вічноквітуча.jpg >"
   },
   {
     name: "Міні-цикламени",
     description: "Компактні та милі, ідеально для подарунків",
     link: "ficus.html",
     id: "ficus",
+    photo:"<img src=photo/міні цикламени.jpg >"
   },
   {
     name: "Товстянка Хобіт",
     description: "Оригінальні трубчасті листки",
     link: "ficus.html",
     id: "ficus",
+    photo:"<img src=photo/товстянка хоббіт.jpg >"
   },
   {
     name: "Хавортія купчаста",
     description: "Листки прозорі на кінчиках, виглядає дуже ефектно",
     link: "ficus.html",
     id: "ficus",
+    photo:"<img src=photo/хавортія купчаста.jpg >"
   },
   {
     name: "Хавортія маргарітіфера",
     description: "Великі білі крапки на темно-зелених листках",
     link: "ficus.html",
     id: "ficus",
+    photo:"<img src=photo/хавортія маргарітіфера.jpg >"
   },
 ];
 
@@ -85,7 +96,7 @@ plants.forEach((plant) => {
   card.className = "card-link";
   card.innerHTML = `
         <div class="plant-card" id="${plant.id}">
-          <img class="photo" src="${plant.photo}>
+          <div class="photo">${plant.photo}</div>
           <h3 class="name">${plant.name}</h3>
           <p class="description">${plant.description}</p>
         </div>
@@ -127,3 +138,4 @@ menuToggle.addEventListener("click", () => {
       sideMenu.classList.remove("show");
     }
   });
+

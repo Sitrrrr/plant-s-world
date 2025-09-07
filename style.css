@@ -146,6 +146,11 @@ li strong{
       display: block;
     }
 
+#cart{
+    background-color: rgb(22, 154, 70);
+    color: white;
+}
+
 .offers h2{
     font-size: 2.2rem; 
   font-weight: 700; 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Кошик</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f5e6;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2e7d32;
+      text-align: center;
+    }
+
+    .cart-item {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .cart-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .cart-item-info {
+      flex-grow: 1;
+    }
+
+    .cart-item-info h3 {
+      margin: 0;
+      color: #388e3c;
+    }
+
+    .cart-item-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .quantity {
+      width: 60px;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    #buy-button {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #buy-button:hover {
+      background-color: #388e3c;
+    }
+
+    #total {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 20px;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🛒 Ваш кошик</h1>
+  <div id="cart-container"></div>
+  <div id="total"></div>
+  <button id="buy-button">Купити</button>
+
+  <script>
+    const cartContainer = document.getElementById('cart-container');
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    if (cart.length === 0) {
+      cartContainer.innerHTML = "<p>Кошик порожній.</p>";
+      document.getElementById('buy-button').style.display = 'none';
+    } else {
+      cart.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <div class="cart-item-info">
+            <h3>${item.name}</h3>
+            <p>Ціна: ₴${item.price}</p>
+            <label>Кількість: 
+              <input type="number" class="quantity" min="1" value="1" data-index="${index}">
+            </label>
+          </div>
+        `;
+        cartContainer.appendChild(div);
+      });
+    }
+
+    document.getElementById('buy-button').addEventListener('click', () => {
+      const quantities = document.querySelectorAll('.quantity');
+      let total = 0;
+
+      quantities.forEach((input, i) => {
+        const qty = parseInt(input.value);
+        const price = cart[i].price;
+        total += qty * price;
+      });
+
+      document.getElementById('total').textContent = `Загальна сума: ₴${total}`;
+      alert(`Дякуємо за покупку! Сума: ₴${total}`);
+      localStorage.removeItem('cart');
+      setTimeout(() => location.reload(), 1000);
+    });
+  </script>
+
+</body>
+</html>
