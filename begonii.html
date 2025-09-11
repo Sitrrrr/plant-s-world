@@ -1,52 +1,134 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>PLANT'S WORLD</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <button id="menu-toggle" class="burger">☰</button>
-      <h1>🌱 PLANT'S WORLD</h1>
-      <input type="text" id="search" placeholder="пошук..." />
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLANT'S WORLD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <nav id="side-menu" class="side-menu">
-      <ul>
+  <header>
+    <button id="menu-toggle" class="burger">☰</button>
+    <div class="discount-banner">
+        <a href="monsteradeli.html">
+    <span class="discount-title">Монстера Делікатесна</span>
+    <span class="discount-text">ЗНИЖКА -50%</span>
+    </a>
+  </div>
+
+    <div class="logo-title">
+    <img src="logo.png" alt="Логотип Plant's World" class="site-logo">
+    <h1>Plant's World</h1>
+  </div>
+
+   <a href="cart.html" class="cart-button">
+    <img src="shopping-cart.png" alt="Кошик" class="cart-icon">
+  </a>
+
+
+    <input type="text" id="search" placeholder="пошук...">
+  </header>
+
+  <!-- Бічне меню -->
+  <nav id="side-menu" class="side-menu">
+    <ul>
         <li><a href="golovna.html">КАТАЛОГ</a></li>
-        <li>
-          <strong>декоративні</strong>
-          <ul>
-            <li><a href="ficus.html">Фікуси</a></li>
-            <li><a href="monsteri.html">Монстери</a></li>
-          </ul>
-        </li>
-        <li>
-          <strong>квітучі</strong>
-          <ul>
-            <li><a href="begonii.html">Бегонії</a></li>
-            <li><a href="ciklamen.html">Цикламени</a></li>
-          </ul>
-        </li>
-        <li>
-          <strong>сукуленти</strong>
-          <ul>
-            <li><a href="tovstyanka.html">Товстянки</a></li>
-            <li><a href="havortii.html">Хавортії</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    <section class="offers">
-      <h2>найкращі пропозиції:</h2>
-      <div class="cards-container" id="cards-container"></div>
-    </section>
+      <li><strong>декоративні</strong>
+        <ul>
+          <li><a href="ficus.html">Фікуси</a></li>
+          <li><a href="monsteri.html">Монстери</a></li>
+        </ul>
+      </li>
+      <li><strong>квітучі</strong>
+        <ul>
+          <li><a href="begonii.html">Бегонії</a></li>
+          <li ><a href="ciklamen.html">Цикламени</a></li>
+        </ul>
+      </li>
+      <li><strong>сукуленти</strong>
+        <ul>
+          <li><a href="tovstyanka.html">Товстянки</a></li>
+          <li><a href="havortii.html">Хавортії</a></li>
+          <li ><a id="cart" href="cart.html">КОШИК</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-    <script src="begonii.js"></script>
+  <section class="offers">
+    <h2>Бегонії</h2>
+    <div class="cards-container" id="cards-container"></div>
+  </section>
+    <script >
+        const container = document.getElementById("cards-container");
+
+const plants = [
+  {
+    name: "Бегонія королівська",
+    description: "Декоративне листя з фантастичними візерунками",
+    link: "ficus.html",
+    id: "ficus",
+  },
+  
+  
+  {
+    name: "Бегонія вічноквітуча",
+    description: "Квітує цілий рік",
+    link: "ficus.html",
+    id: "ficus",
+  },
+  
+];
+
+plants.forEach((plant) => {
+  const card = document.createElement("a");
+  card.href = plant.link;
+  card.className = "card-link";
+  card.innerHTML = `
+        <div class="plant-card" id="${plant.id}">
+          <div class="photo">фото</div>
+          <h3 class="name">${plant.name}</h3>
+          <p class="description">${plant.description}</p>
+        </div>
+      `;
+  container.appendChild(card);
+});
+
+document
+  .getElementById("search")
+  .addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    document.querySelectorAll(".plant-card").forEach((card) => {
+      const name = card
+        .querySelector(".name")
+        .textContent.toLowerCase();
+      card.parentElement.style.display = name.includes(query)
+        ? "block"
+        : "none";
+    });
+  });
+
+const menuToggle = document.getElementById("menu-toggle");
+const sideMenu = document.getElementById("side-menu");
+
+let menuOpen = false;
+menuToggle.addEventListener("click", () => {
+  menuOpen = !menuOpen;
+  sideMenu.classList.toggle("show", menuOpen);
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    menuOpen &&
+    !sideMenu.contains(event.target) &&
+    event.target !== menuToggle
+  ) {
+    menuOpen = false;
+    sideMenu.classList.remove("show");
+  }
+});
+
+    </script>
   </body>
 </html>

@@ -23,13 +23,14 @@ body {
 
 /* Логотип */
 .site-logo {
-  width: 40px; /* або більше, залежно від дизайну */
+  width: 55px; /* або більше, залежно від дизайну */
   height: auto;
+ 
 }
 
 /* Назва сайту */
 .logo-title h1 {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
   margin: 0;
   color: #dceddd;
@@ -386,3 +387,10 @@ li strong{
   margin-top: 5px;
 }
 
+a{ text-decoration: none;}
+
+.plant-price2 {
+ font-size: 22px;
+      color: #bb1616;
+      margin-bottom: 20px;
+}
