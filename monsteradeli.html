@@ -51,8 +51,10 @@
     <img src="photo/монстера делікатесна.png" alt="Монстера Делікатесна" class="plant-image">
 
     <h2 class="plant-title">Монстера Делікатесна</h2>
-    <div class="plant-price">₴600</div>
-    <div class="plant-price2">₴300</div>
+    <div class="product-price">
+  <span class="old-price">₴600</span>
+  <span class="new-price">₴300</span>
+</div>
 
     <div class="plant-description">
       Фікус Бенджаміна — популярна декоративна рослина з блискучим листям, яка чудово очищає повітря та прикрашає інтер’єр.
@@ -73,20 +75,20 @@
   <h3>Відгуки покупців</h3>
 
   <div class="review-card">
-    <strong>Микола Медяник</strong>
-    <p>Рослина дуже гарна, листя блискуче. Доставили швидко!</p>
+    <strong>Нікола Тесла</strong>
+    <p>імба не зашквар</p>
     <span class="review-date">02.09.2025</span>
   </div>
 
   <div class="review-card">
-    <strong>Лабуба</strong>
-    <p>Стоїть у вітальні — всі гості питають, де купив. Рекомендую!</p>
+    <strong>Лабрадор</strong>
+    <p>гав гав, гав гав гавав</p>
     <span class="review-date">31.08.2025</span>
   </div>
 
   <div class="review-card">
     <strong>кіця</strong>
-    <p>лайно воно того не варте</p>
+    <p>ЖААААААХ🤮🤮🤮🤮</p>
     <span class="review-date">29.08.2025</span>
   </div>
 
@@ -126,10 +128,10 @@ menuToggle.addEventListener("click", () => {
   // cart
   document.querySelector('.add-to-cart').addEventListener('click', () => {
     const product = {
-      name: "Фікус Бенджаміна",
+      name: "Монстера Делікатесна",
       price: 300,
-      image: "ficus.jpg",
-      id: "ficus"
+      image: "photo/монстера делікатесна.png",
+      id: "monstera"
     };
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];

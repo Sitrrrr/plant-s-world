@@ -401,3 +401,24 @@ a{ text-decoration: none;}
   border-radius: 8px; /* щоб гарно виглядало */
   display: block;
 }
+
+
+
+.product-price {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.old-price {
+  color: #888; /* сірий колір для старої ціни */
+  text-decoration: line-through; /* закреслювання */
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.new-price {
+  color: #d32f2f; /* червоний колір для знижки */
+  font-size: 22px;
+  font-weight: 700;
+}

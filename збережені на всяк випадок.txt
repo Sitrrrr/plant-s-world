@@ -147,3 +147,9 @@ menuToggle.addEventListener("click", () => {
     menuOpen = !menuOpen;
     sideMenu.classList.toggle('show', menuOpen);
   });
+
+
+
+
+<div class="plant-price">₴600</div>
+    <div class="plant-price2">₴300</div>
