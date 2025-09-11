@@ -7,7 +7,7 @@ const plants = [
       "Елегантне деревце з густою кроною та маленькими блискучими листочками.",
     link: "ficusbenjemin.html",
     id: "ficus",
-    photo:"<img src=photo/фікус бенджаміна.png >"
+    photo:"photo/фікус бенджаміна.png"
   },
   {
     name: "Фікус Лірата",
@@ -15,78 +15,78 @@ const plants = [
       "великі, глянцеві листки у формі скрипки роблять його «зіркою інтер’єру»",
     link: "ficuslirata.html",
     id: "dracaena",
-    photo:"<img src=photo/фікус лірата.png >"
+    photo:"photo/фікус лірата.png"
   },
   {
     name: "Монстера делікатесна",
     description: "Великі розрізані листки, справжня класика",
     link: "monsteradeli.html",
     id: "echeveria",
-    photo:"<img src=photo/монстера делікатесна.png >"
+    photo:"photo/монстера делікатесна.png"
   },
   {
     name: "Бегонія королівська",
     description: "Декоративне листя з фантастичними візерунками",
-    link: "ficus.html",
-    id: "ficus",
-    photo:"<img src=photo/бегонія королівська.jpg >"
+    link: "fic.html",
+    id: "fic",
+    photo:"photo/бегонія королівська.jpg"
   },
   {
     name: "Цикламен перський",
     description: "Яскраві квіти, довготривале цвітіння",
-    link: "ficus.html",
+    link: "fic.html",
     id: "ficus",
-    photo:"<img src=photo/цикламен перський.jpg >"
+    photo:"photo/цигламен перський.jpg"
   },
   {
     name: "Фікус Еластика",
     description:
       "має товсті, темно-зелені або строкаті листки. Дуже витривалий і простий у догляді",
     link: "ficus.html",
-    id: "ficus",
-    photo:"<img src=photo/фікус еластіка.jpg >"
+    id: "fic",
+    photo:"photo/фікус еластіка.jpg"
   },
   {
     name: "Монстера варієгатна",
     description: "Біла чи кремова варіація на листках, рідкість",
     link: "ficus.html",
-    id: "ficus",
-    photo:"<img src=photo/монстера варієгатна.jpg >"
+    id: "fic",
+    photo:"photo/монстера варієгатна.jpg"
   },
   {
     name: "Бегонія вічноквітуча",
     description: "Квітує цілий рік",
-    link: "ficus.html",
+    link: "fic.html",
     id: "ficus",
-    photo:"<img src=photo/бегонія вічноквітуча.jpg >"
+    photo:"photo/бегонія вічноквітуча.jpg"
   },
   {
     name: "Міні-цикламени",
     description: "Компактні та милі, ідеально для подарунків",
-    link: "ficus.html",
+    link: "fic.html",
     id: "ficus",
-    photo:"<img src=photo/міні цикламени.jpg >"
+    photo:"photo/міні цикламени.jpg "
   },
   {
     name: "Товстянка Хобіт",
     description: "Оригінальні трубчасті листки",
-    link: "ficus.html",
+    link: "fic.html",
     id: "ficus",
-    photo:"<img src=photo/товстянка хоббіт.jpg >"
+    photo:"photo/товстянка хоббіт.png"
   },
   {
     name: "Хавортія купчаста",
     description: "Листки прозорі на кінчиках, виглядає дуже ефектно",
-    link: "ficus.html",
+    link: "fic.html",
     id: "ficus",
-    photo:"<img src=photo/хавортія купчаста.jpg >"
+    photo:"photo/хавортія купчаста.jpg"
   },
   {
     name: "Хавортія маргарітіфера",
     description: "Великі білі крапки на темно-зелених листках",
-    link: "ficus.html",
+    link: "fis.html",
     id: "ficus",
-    photo:"<img src=photo/хавортія маргарітіфера.jpg >"
+    photo:"photo/хавортія маргарітіфера.png"
   },
 ];
 
@@ -96,7 +96,7 @@ plants.forEach((plant) => {
   card.className = "card-link";
   card.innerHTML = `
         <div class="plant-card" id="${plant.id}">
-          <div class="photo">${plant.photo}</div>
+          <img class="photoplants" src="${plant.photo}">
           <h3 class="name">${plant.name}</h3>
           <p class="description">${plant.description}</p>
         </div>

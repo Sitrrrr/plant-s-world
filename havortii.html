@@ -66,8 +66,8 @@ const container = document.getElementById('cards-container');
 
    
     const plants = [
-     { name: "Хавортія купчаста", description: "Листки прозорі на кінчиках, виглядає дуже ефектно", link: "ficus.html", id: "ficus" },
-    { name: "Хавортія маргарітіфера", description: "Великі білі крапки на темно-зелених листках", link: "ficus.html", id: "ficus" },
+     { name: "Хавортія купчаста", description: "Листки прозорі на кінчиках, виглядає дуже ефектно", link: "fic.html", id: "ficus", photo:"photo/хавортія купчаста.jpg" },
+    { name: "Хавортія маргарітіфера", description: "Великі білі крапки на темно-зелених листках", link: "fic.html", id: "ficus", photo:"photo/хавортія маргарітіфера.png" },
     ];
 
     plants.forEach(plant => {
@@ -76,7 +76,7 @@ const container = document.getElementById('cards-container');
       card.className = 'card-link';
       card.innerHTML = `
         <div class="plant-card" id="${plant.id}">
-          <div class="photo">фото</div>
+          <img class="photoplants" src="${plant.photo}">
           <h3 class="name">${plant.name}</h3>
           <p class="description">${plant.description}</p>
         </div>

@@ -72,6 +72,7 @@ const plants = [
     description: "Оригінальні трубчасті листки",
     link: "ficus.html",
     id: "ficus",
+    photo:"photo/товстянка хоббіт.png"
   },
 ];
 
@@ -81,7 +82,7 @@ plants.forEach((plant) => {
   card.className = "card-link";
   card.innerHTML = `
         <div class="plant-card" id="${plant.id}">
-          <div class="photo">фото</div>
+          <img class="photoplants" src="${plant.photo}">
           <h3 class="name">${plant.name}</h3>
           <p class="description">${plant.description}</p>
         </div>

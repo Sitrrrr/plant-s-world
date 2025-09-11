@@ -138,13 +138,12 @@ li strong{
     }
 
     .photo {
-      background-color: #d0e8d0;
-      height: 100px;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
+    width: 100%;
+  height: 200px; /* або будь-яка висота, яка тобі підходить */
+  object-fit: cover; /* обрізає зображення пропорційно */
+  border-radius: 8px; /* щоб гарно виглядало */
+  display: block;
+      
     }
 
     .name {
@@ -393,4 +392,12 @@ a{ text-decoration: none;}
  font-size: 22px;
       color: #bb1616;
       margin-bottom: 20px;
+}
+
+.photoplants{
+   width: 100%;
+  height: 200px; /* або будь-яка висота, яка тобі підходить */
+  object-fit: cover; /* обрізає зображення пропорційно */
+  border-radius: 8px; /* щоб гарно виглядало */
+  display: block;
 }

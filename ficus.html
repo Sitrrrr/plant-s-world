@@ -66,9 +66,9 @@ const container = document.getElementById('cards-container');
 
    
     const plants = [
-      { name: "Фікус Бенджаміна", description: "Елегантне деревце з густою кроною та маленькими блискучими листочками.", link: "ficusbenjemin.html", id: "ficus" },
-      { name: "Фікус Лірата", description: "великі, глянцеві листки у формі скрипки роблять його «зіркою інтер’єру»", link: "dracaena.html", id: "dracaena" },
-    { name: "Фікус Еластика", description: "має товсті, темно-зелені або строкаті листки. Дуже витривалий і простий у догляді", link: "ficus.html", id: "ficus" },
+      { name: "Фікус Бенджаміна", description: "Елегантне деревце з густою кроною та маленькими блискучими листочками.", link: "ficusbenjemin.html", id: "ficus",photo:"photo/фікус бенджаміна.png" },
+      { name: "Фікус Лірата", description: "великі, глянцеві листки у формі скрипки роблять його «зіркою інтер’єру»", link: "dracaena.html", id: "dracaena", photo:"photo/фікус лірата.png" },
+    { name: "Фікус Еластика", description: "має товсті, темно-зелені або строкаті листки. Дуже витривалий і простий у догляді", link: "ficus.html", id: "ficus", photo:"photo/фікус еластіка.jpg" },
     ];
 
     plants.forEach(plant => {
@@ -76,8 +76,8 @@ const container = document.getElementById('cards-container');
       card.href = plant.link;
       card.className = 'card-link';
       card.innerHTML = `
-        <div class="plant-card" id="${plant.id}">
-          <div class="photo">фото</div>
+       <div class="plant-card" id="${plant.id}">
+          <img class="photoplants" src="${plant.photo}">
           <h3 class="name">${plant.name}</h3>
           <p class="description">${plant.description}</p>
         </div>

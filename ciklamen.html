@@ -67,8 +67,8 @@
    
     const plants = [
       
-      {name: "Цикламен перський", description: "Яскраві квіти, довготривале цвітіння", link: "ficus.html", id: "ficus" },
-    { name: "Міні-цикламени", description: "Компактні та милі, ідеально для подарунків", link: "ficus.html", id: "ficus" },
+      {name: "Цикламен перський", description: "Яскраві квіти, довготривале цвітіння", link: "ficus.html", id: "ficus", photo:"photo/цигламен перський.jpg"},
+    { name: "Міні-цикламени", description: "Компактні та милі, ідеально для подарунків", link: "ficus.html", id: "ficus",photo:"photo/міні цикламени.jpg "  },
     ];
 
     plants.forEach(plant => {
@@ -76,8 +76,8 @@
       card.href = plant.link;
       card.className = 'card-link';
       card.innerHTML = `
-        <div class="plant-card" id="${plant.id}">
-          <div class="photo">фото</div>
+       <div class="plant-card" id="${plant.id}">
+          <img class="photoplants" src="${plant.photo}">
           <h3 class="name">${plant.name}</h3>
           <p class="description">${plant.description}</p>
         </div>
